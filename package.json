@@ -24,6 +24,7 @@
   "homepage": "https://github.com/brrock/blog#readme",
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "@material-tailwind/html": "^2.2.2",
     "luxon": "^3.2.1"
   },
   "devDependencies": {

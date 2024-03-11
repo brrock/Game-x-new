@@ -5,12 +5,38 @@ layout: 'base.njk'
 ---  
 
 <div class="top-5 absolute ">
-    <h1 class="text-left dark:text-white text-black text-3xl top-14 absolute ml-2 ">Discover</h1> <br> <br>
-    <div class="flex-row flex">
-        <ul class="dark:text-white text-black top-14 absolute">
-            {%- for post in collections.discover | reverse-%}
-                {% include 'article-snippet.njk' %}
-                {%-endfor-%}
-            </ul>
-        </div>
-    </div>
+    <h1 class="text-left dark:text-white text-black text-3xl top-14 absolute ml-2 ">Discover</h1>
+    <br>
+        <br>
+            <br>
+                <br>
+                    <div class="flex  space-x-4 ">
+                        <ul class="text-center  flex ">
+                            {%- for post in collections.discover | reverse-%}
+                                {% include 'article-snippet.njk' %}
+                                {%-endfor-%}
+                            </ul>
+                        </div>
+                        <h1 class="text-left dark:text-white text-black text-3xl ml-2 absolute">New
+                        </h1>
+                        <br>
+                            <br>
+                                <div class="flex  space-x-4">
+                                    <ul class="text-center  flex ">
+                                        {%- for post in collections.discover | reverse-%}
+                                            {% include 'article-snippet.njk' %}
+                                            {%-endfor-%}
+                                        </ul>
+                                    </div>
+                                    <h1 class="text-left dark:text-white text-black text-3xl ml-2 absolute">Popluar
+                                    </h1>
+                                    <br>
+                                        <br>
+                                            <div class="flex  space-x-4">
+                                                <ul class="text-center  flex ">
+                                                    {%- for post in collections.discover | reverse-%}
+                                                        {% include 'article-snippet.njk' %}
+                                                        {%-endfor-%}
+                                                    </ul>
+                                                </div>
+                                            </div>
