@@ -3,40 +3,30 @@
 title: Home | Game X 
 layout: 'base.njk'
 ---  
+<div class="top-5 absolute">
+    <h1 class="text-left dark:text-white text-black text-3xl top-14 absolute ml-2">Discover</h1>
+    <div class="flex space-x-4 mt-20 md:mt-10">
+        <ul class="text-center flex">
+            {%- for post in collections.discover | reverse-%}
+            {% include 'article-snippet.njk' %}
+            {%-endfor-%}
+        </ul>
+    </div>
+    <h1 class="text-left dark:text-white text-black text-3xl ml-2 absolute mt-20 md:mt-10">New</h1>
+    <div class="flex space-x-4 mt-20 md:mt-10">
+        <ul class="text-center flex">
+            {%- for post in collections.discover | reverse-%}
+            {% include 'article-snippet.njk' %}
+            {%-endfor-%}
+        </ul>
+    </div>
+    <h1 class="text-left dark:text-white text-black text-3xl ml-2 absolute mt-20 md:mt-10">Popular</h1>
+    <div class="flex space-x-4 mt-20 md:mt-10">
+        <ul class="text-center flex">
+            {%- for post in collections.discover | reverse-%}
+            {% include 'article-snippet.njk' %}
+            {%-endfor-%}
+        </ul>
+    </div>
+</div>
 
-<div class="top-5 absolute ">
-    <h1 class="text-left dark:text-white text-black text-3xl top-14 absolute ml-2 ">Discover</h1>
-    <br>
-        <br>
-            <br>
-                <br>
-                    <div class="flex  space-x-4 ">
-                        <ul class="text-center  flex ">
-                            {%- for post in collections.discover | reverse-%}
-                                {% include 'article-snippet.njk' %}
-                                {%-endfor-%}
-                            </ul>
-                        </div>
-                        <h1 class="text-left dark:text-white text-black text-3xl ml-2 absolute">New
-                        </h1>
-                        <br>
-                            <br>
-                                <div class="flex  space-x-4">
-                                    <ul class="text-center  flex ">
-                                        {%- for post in collections.discover | reverse-%}
-                                            {% include 'article-snippet.njk' %}
-                                            {%-endfor-%}
-                                        </ul>
-                                    </div>
-                                    <h1 class="text-left dark:text-white text-black text-3xl ml-2 absolute">Popluar
-                                    </h1>
-                                    <br>
-                                        <br>
-                                            <div class="flex  space-x-4">
-                                                <ul class="text-center  flex ">
-                                                    {%- for post in collections.discover | reverse-%}
-                                                        {% include 'article-snippet.njk' %}
-                                                        {%-endfor-%}
-                                                    </ul>
-                                                </div>
-                                            </div>
