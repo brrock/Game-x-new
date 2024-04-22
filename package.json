@@ -25,7 +25,8 @@
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@material-tailwind/html": "^2.2.2",
-    "luxon": "^3.2.1"
+    "luxon": "^3.2.1",
+    "pixi.js": "^8.0.5"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.18",

@@ -1,0 +1,12 @@
+---
+layout: 'base.njk'
+title: All | Game X
+---
+<h1>All Games</h1>
+<div class="flex space-x-4">
+    <ul class="text-center flex">
+        {%- for post in collections.game | reverse -%}
+            {% include 'article-snippet.njk' %}
+        {%- endfor -%}
+    </ul>
+</div>

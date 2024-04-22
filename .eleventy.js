@@ -1,16 +1,21 @@
-const { DateTime } = require("luxon")
-module.exports = function(eleventyConfig) {
-  eleventyConfig.addPassthroughCopy('./src/style.css');
-  eleventyConfig.addPassthroughCopy('./src/assets');
-  eleventyConfig.addPassthroughCopy('./src/admin/config.yml');     
+const { DateTime } = require('luxon');
+const { eleventyConfig } = require('@11ty/eleventy');
+const { PIXI } = require('pixi.js');
+module.exports = (config) => {
+  config.addPassthroughCopy('src/style.css');
+  config.addPassthroughCopy('src/assets');
+  config.addPassthroughCopy('src/js');
+  config.addPassthroughCopy('src/admin/config.yml');
 
-  eleventyConfig.addFilter("postDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+  config.addFilter('postDate', (dateObj) => {
+    return DateTime.fromJSDate(dateObj).toFormat('MMMM dd, yyyy');
   });
-        return {
-          dir: {
-            input: "src",
-            output: "public"
-          }
-        }
-      };
+
+  return {
+    dir: {
+      input: 'src',
+      output: 'public',
+    },
+  };
+};
+
