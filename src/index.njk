@@ -2,10 +2,11 @@
 title: Home | Game X 
 layout: 'base.njk'
 ---
+
 <div class="top-5 absolute">
-    <!-- Title of section "Discover" -->
-    <h1 class="text-left dark:text-white text-black text-3xl top-14 absolute ml-2">Discover</h1>
-    <!-- List of articles in "Discover" section -->
+  
+    <h1 class="text-left dark:text-white text-black text-3xl top-11 absolute ml-2">Discover</h1>
+  
     <div class="flex space-x-4">
         <ul class="text-center flex">
             {%- for post in collections.discover | reverse -%}
@@ -13,9 +14,9 @@ layout: 'base.njk'
             {%- endfor -%}
         </ul>
     </div>
-    <!-- Title of section "New Games" -->
+   <!-- 
     <h1 class="text-left dark:text-white text-black text-3xl ml-2 absolute">New Games</h1>
-    <!-- List of games in "New Games" section -->
+
     <div class="flex space-x-4">
         <ul class="text-center flex">
             {%- for post in collections.newGames | reverse -%}
@@ -23,9 +24,9 @@ layout: 'base.njk'
             {%- endfor -%}
         </ul>
     </div>
-    <!-- Title of games "Popular Games" -->
+   >
     <h1 class="text-left dark:text-white text-black text-3xl ml-2 absolute">Popular Games</h1>
-    <!-- List of games in "Popular Games" section -->
+   
     <div class="flex space-x-4">
         <ul class="text-center flex">
             {%- for post in collections.popularGames | reverse -%}
@@ -33,4 +34,4 @@ layout: 'base.njk'
             {%- endfor -%}
         </ul> 
     </div>
-</div> 
+</div>
